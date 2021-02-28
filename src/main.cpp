@@ -1,13 +1,10 @@
-#include<iostream>
-#include <wiringPi.h>
+#include <iostream>
+#include "moisture_sensor.hpp"
 
 int main(int argc, char** argv) { 
-    wiringPiSetup();
 
-    // pinMode(0, OUTPUT);
-    pinMode(1, INPUT);
-
-    int status = digitalRead(1);
-    std::cout << "pin 1 = " << status << std::endl;
+    MoistureSensor sensor(2);
+    std::cout << "moisture sensor reading " 
+              << sensor.get_reading() << std::endl;
     return 0;
 }
