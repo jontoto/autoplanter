@@ -5,7 +5,7 @@
 
 MoistureSensor::MoistureSensor(int read_pin) : m_read_pin{read_pin} {
     wiringPiSetup();
-    pinMode(m_read_pin, INPUT);
+    pinMode(m_read_pin, OUTPUT);
 }
 
 int MoistureSensor::get_reading() {
