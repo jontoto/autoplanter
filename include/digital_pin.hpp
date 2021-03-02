@@ -1,11 +1,11 @@
 #pragma once
 
-class LedLight {
+class DigitalPin {
  private:
     int m_ctrl_pin;
  public:
-    LedLight(int ctrl_pin);
-    ~LedLight() = default;
+    DigitalPin(int ctrl_pin);
+    ~DigitalPin();
 
     void turn_on();
     void turn_off();
